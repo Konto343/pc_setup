@@ -1,0 +1,29 @@
+[global]
+	timeout = 30
+	corner_radius = 8
+	max_icon_size = 32
+	stack_duplicates = true
+	word_wrap = true
+	show_age_threshold = 60
+	alignment = center
+	markup = full
+	sort = yes
+	padding = 8
+
+[urgency_low]
+	background = "#2b2b2b"
+	foreground = "#FFFFFF"
+	frame_color = "#FFFF00"
+	timeout = -1
+
+[urgency_normal]
+	background = "#2b2b2b"
+	forground = "#FFFFFF"
+	frame_color = "#0000FF"
+	timeout = -1
+
+[urgency_critical]
+	background = "#2b2b2b"
+	foreground = "#FFFFFF"
+	frame_color = "#FF0000"
+	timeout = -1

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Open Terminal Here</name>
+	<submenu></submenu>
+	<unique-id>1739114318904881-1</unique-id>
+	<command>kitty --working-directory=%d</command>
+	<description>Opens a Terminal set to a directory.</description>
+	<range></range>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon>accessories-text-editor</icon>
+	<name>Edit In Nano</name>
+	<submenu>File</submenu>
+	<unique-id>1740184033398771-1</unique-id>
+	<command>kitty -e nano %f</command>
+	<description>Opens a file in Nano</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>dialog-information</icon>
+	<name>FFmpeg Data</name>
+	<submenu>File</submenu>
+	<unique-id>1740154063398771-1</unique-id>
+	<command>kitty --hold -e ffmpeg -i %f</command>
+	<description>Prints file data with FFmpeg</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>printer</icon>
+	<name>Print</name>
+	<submenu>Printing</submenu>
+	<unique-id>1752529663174962-1</unique-id>
+	<command>lp %F &amp;&amp; notify-send &quot;Printing&quot; &quot;Added Job(s)&quot;</command>
+	<description>Print File(s) with CUPS</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<image-files/>
+</action>
+<action>
+	<icon>folder-music</icon>
+	<name>Play with Deadbeef</name>
+	<submenu>Music</submenu>
+	<unique-id>1752531880779848-1</unique-id>
+	<command>deadbeef %F</command>
+	<description>Play song(s) with Deadbeef</description>
+	<range>*</range>
+	<patterns>*</patterns>
+</action>
+<action>
+	<icon>system-file-manager</icon>
+	<name>Compare With Meld</name>
+	<submenu>File</submenu>
+	<unique-id>1752532076427906-2</unique-id>
+	<command>kitty --hold sh -c &quot;sudo meld %F&quot; &amp;&amp; notify-send &quot;Meld&quot; &quot;Comparsion done!&quot;</command>
+	<description>Compare file(s) with meld</description>
+	<range>*</range>
+	<patterns>*</patterns>
+</action>
+<action>
+	<icon></icon>
+	<name>Zip</name>
+	<submenu>Archive</submenu>
+	<unique-id>1752532180758034-3</unique-id>
+	<command>zip -r archive.zip %F &amp;&amp; notify-send &quot;Archive&quot; &quot;Zip file processed&quot;</command>
+	<description>Zip file(s) in a compressed archive</description>
+	<range>*</range>
+	<patterns>*</patterns>
+</action>
+<action>
+	<icon></icon>
+	<name>Unzip</name>
+	<submenu>Archive</submenu>
+	<unique-id>1752532237211456-4</unique-id>
+	<command>unzip %F &amp;&amp; notify-send &quot;Archive&quot; &quot;Unzip finished&quot;</command>
+	<description>Unzip archives with unzip</description>
+	<range>*</range>
+	<patterns>*</patterns>
+</action>
+</actions>
