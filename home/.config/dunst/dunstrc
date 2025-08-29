@@ -1,14 +1,13 @@
 [global]
-	timeout = 30
-	corner_radius = 8
+	timeout = -1
+	corner_radius = 4
 	max_icon_size = 32
-	stack_duplicates = true
+	stack_duplicates = false
 	word_wrap = true
-	show_age_threshold = 60
-	alignment = center
+	alignment = left
 	markup = full
 	sort = yes
-	padding = 8
+	padding = 4
 
 [urgency_low]
 	background = "#2b2b2b"

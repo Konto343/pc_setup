@@ -6,11 +6,17 @@ set $alt Alt
 font pango:monospace 10
 default_border pixel 0 
 
+# pc only
+# exec xrandr --output HDMI-0 --pos 0x0 --mode 1920x1080 --rate 143.99
+
 # setup
 exec --no-startup-id dex --autostart --environment i3
-exec_always --no-startup-id xset dpms 0 0 60
+exec_always --no-startup-id xset dpms 0 0 180
 exec_always --no-startup-id xss-lock -- i3lock -n -e -f -i ~/.wallpapers/main.png
-exec --no-startup-id xautolock -time 1 -locker "systemctl suspend && i3lock -n -e -f -i ~/.wallpapers/main.png"
+exec --no-startup-id xautolock -time 1 -locker "i3lock -n -e -f -i ~/.wallpapers/main.png"
+exec --no-startup-id nm-applet
+exec --no-startup-id kwalletd6
+exec --no-startup-id blueman-applet
 
 exec feh --bg-scale /home/$USER/.wallpapers/main.jpg
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
