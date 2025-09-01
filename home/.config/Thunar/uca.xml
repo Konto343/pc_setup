@@ -81,7 +81,7 @@
 	<command>zip -r archive.zip %F &amp;&amp; notify-send &quot;Archive&quot; &quot;Zip file processed&quot;</command>
 	<description>Zip file(s) in a compressed archive</description>
 	<range>*</range>
-	<patterns>*</patterns>
+	<patterns>*.zip</patterns>
 </action>
 <action>
 	<icon></icon>
@@ -91,6 +91,6 @@
 	<command>unzip %F &amp;&amp; notify-send &quot;Archive&quot; &quot;Unzip finished&quot;</command>
 	<description>Unzip archives with unzip</description>
 	<range>*</range>
-	<patterns>*</patterns>
+	<patterns>*.zip</patterns>
 </action>
 </actions>

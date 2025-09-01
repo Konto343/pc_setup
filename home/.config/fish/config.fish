@@ -22,6 +22,10 @@ function timer -d "Set a timer" -a seconds minutes hours
 	notify-send "Timer" "Timer has finished"
 end
 
+function sha1sum_dir -d "Get the sha1sum of a Directory" -d dir_path
+	find $dir_path -type f -print0 | xargs -0 sha1sum | sha1sum
+end
+
 function weather -d "Print the weather" -a city_name
     curl "https://wttr.in/$city_name"
 end

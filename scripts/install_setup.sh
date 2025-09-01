@@ -55,15 +55,15 @@ if yesno "Do you want to install the base setup?"; then
 	yes '' | sudo systemctl enable ly
 
 	info "Installing I3 Window Manager (Select all if possible.)"
-	yes '' | sudo pacman -S i3 xorg polybar
+	yes '' | sudo pacman -S i3 xorg polybar xdg-desktop-portal-gtk
 
 	info "Installing Apps"
 	# important
-	yes '' | sudo pacman -S networkmanager 7zip blueman btop fzf powertop meld dust cmus cups cups-filters cups-pdf fish feh flatpak git kitty nano ncdu fastfetch neovim npm pyenv tmux ufw unzip zip tar tumbler ffmpeg ffmpegthumbnailer lshw nano-syntax-highlighting tealdeer rsync powertop speedtest-cli dysk cronie
+	yes '' | sudo pacman -S networkmanager network-manager-applet 7zip blueman btop fzf powertop meld dust dunst cmus cups cups-filters cups-pdf fish feh flatpak git kitty nano ncdu fastfetch neovim npm pyenv tmux ufw unzip zip tar tumbler ffmpeg ffmpegthumbnailer lshw nano-syntax-highlighting tealdeer rsync powertop speedtest-cli dysk cronie openssh
 	# other
-	yes '' | sudo pacman -S kitty flameshot thunar nwg-look nwg-bar brightnessctl pavucontrol playerctl rofi ttf-jetbrains-mono-nerd tuned-ppd system-config-printer print-manager
+	yes '' | sudo pacman -S polkit-kde-agent kitty flameshot thunar nwg-look nwg-bar brightnessctl pavucontrol playerctl rofi ttf-jetbrains-mono-nerd tuned-ppd system-config-printer print-manager
 	yes '' | sudo pacman -S blender gimp krita hexchat inkscape libreoffice-still mpv mupdf obs-studio kdenlive handbrake mupdf
-	yes '' | sudo pacman -S kcalc ktimer deadbeef gnome-maps gnome-disk-utility
+	yes '' | sudo pacman -S kcalc ktimer gnome-maps gnome-disk-utility
 	# security related
 	yes '' | sudo pacman -S keepassxc signal-desktop wireshark-cli
 	# dev
@@ -71,7 +71,7 @@ if yesno "Do you want to install the base setup?"; then
 	# file systems' support
 	yes '' | sudo pacman -S gvfs gvfs-gphoto2 gvfs-mtp mtpfs ntfs-3g
 	# yay
-	yay -S vscodium librewolf logseq-desktop xautolock
+	yay -S vscodium-bin librewolf-bin logseq-desktop-bin xautolock
 
 	# syntax highlighting for nano
 	echo "include /usr/share/nano-syntax-highlighting/*.nanorc" | sudo tee -a /etc/nanorc
@@ -81,9 +81,12 @@ if yesno "Do you want to install the base setup?"; then
 	sudo systemctl enable --now cups
 	# network manager
 	sudo systemctl enable --now NetworkManager.service 
+	sudo systemctl disable iwd
 	# turn on power manager
 	sudo systemctl enable --now tuned.service
 	sudo systemctl enable --now tuned-ppd.service 
+	# firewall
+	sudo ufw enable
 fi
 
 if yesno "Do you have a Nvidia GPU?"; then
@@ -98,8 +101,13 @@ if yesno "Do you Own a Brother Laser-Printer and want to install the driver?"; t
 	yay -S brlaser
 fi
 
+if yesno "Do use a touchpad and want Double Tap to Middle Click?"; then
+	sudo cp -r 90-touchpad.conf /etc/X11/xorg.conf.d/
+	echo "Done."
+fi
+
 if yesno "Do you want to install extra yay packages?"; then
-	yay -S vesktop cbonsai pipes.sh cava localsend mullvad-vpn gallery-dl osu-lazer minecraft-launcher
+	yay -S vesktop-bin cbonsai pipes.sh cava localsend-bin mullvad-vpn-bin gallery-dl osu-lazer-bin minecraft-launcher
 fi
 
 info "Setup complete!"
