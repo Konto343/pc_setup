@@ -6,11 +6,16 @@ set $alt Alt
 font pango:monospace 10
 default_border pixel 0 
 
+# pc only
+exec xrandr --output HDMI-0 --pos 0x0 --mode 1920x1080 --rate 143.99
+
 # setup
 exec --no-startup-id dex --autostart --environment i3
-exec_always --no-startup-id xset dpms 0 0 60
-exec_always --no-startup-id xss-lock -- i3lock -n -e -f -i ~/.wallpapers/main.png
-exec --no-startup-id xautolock -time 1 -locker "systemctl suspend && i3lock -n -e -f -i ~/.wallpapers/main.png"
+exec_always --no-startup-id xset dpms 0 0 180
+exec --no-startup-id xautolock -time 1 -locker "i3lock -n -e -f -c 000000"
+exec --no-startup-id nm-applet
+exec --no-startup-id kwalletd6
+exec --no-startup-id blueman-applet
 
 exec feh --bg-scale /home/$USER/.wallpapers/main.jpg
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
@@ -43,12 +48,13 @@ bindsym $alt+F4 exec notify-send "Retard Detected" "You have pressed Alt+F4, Whi
 bindsym $mod+r exec "rofi -show-icons -modi drun,run -show drun"
 
 bindsym $mod+Escape exec nwg-bar
-bindsym $mod+l exec i3lock -n -e -f -i ~/.wallpapers/main.png
+bindsym $mod+l exec i3lock -n -e -f -c 000000
 bindsym $mod+q exec i3-sensible-terminal
 bindsym $mod+e exec thunar
 bindsym $mod+c kill
 bindsym $mod+Shift+c exec notify-send "Force Kill" "Pick a window to kill" && xkill
 bindsym Print exec flameshot full
+bindsym Shift+Print exec flameshot gui
 
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down

@@ -26,18 +26,8 @@ info "I recommend you enabling 'multilib' in the pacman conf (/etc/pacman.conf),
 info "I also recommend you update pacman with 'sudo pacman -syu', so multlib gets downloaded before hand."
 info "Finally, don't forget your trusty *nano* for text editing!"
 
-if yesno "Do you wish to continue with the install?"; then
-	info Starting...
-else
-	exit
-fi
-
 info "Installing apps required for setup"
 sudo pacman -S --needed base-devel git github-cli reflector
-
-if yesno "Do you want update Pacman Mirrors to the fastest available? (Will override current!)"; then
-	sudo reflector --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist --verbose
-fi
 
 info "Before Starting, it's Recommended to install AUR helper, such as YAY."
 if yesno "Do you want to install the yay package manager?"; then
@@ -49,7 +39,7 @@ if yesno "Do you want to install the yay package manager?"; then
 	yay --version
 fi
 
-if yesno "Do you want to install the base setup?"; then
+if true; then
 	info "Installing Ly (Greeter)"
 	yes '' | sudo pacman -S ly
 	yes '' | sudo systemctl enable ly
@@ -59,11 +49,11 @@ if yesno "Do you want to install the base setup?"; then
 
 	info "Installing Apps"
 	# important
-	yes '' | sudo pacman -S networkmanager 7zip blueman btop fzf powertop meld dust cmus cups cups-filters cups-pdf fish feh flatpak git kitty nano ncdu fastfetch neovim npm pyenv tmux ufw unzip zip tar tumbler ffmpeg ffmpegthumbnailer lshw nano-syntax-highlighting tealdeer rsync powertop speedtest-cli dysk cronie
+	yes '' | sudo pacman -S networkmanager network-manager-applet 7zip blueman btop fzf powertop meld dust cmus cups cups-filters cups-pdf fish feh flatpak git kitty nano ncdu fastfetch neovim npm pyenv tmux ufw unzip zip tar tumbler ffmpeg ffmpegthumbnailer lshw nano-syntax-highlighting tealdeer rsync powertop speedtest-cli dysk cronie
 	# other
-	yes '' | sudo pacman -S kitty flameshot thunar nwg-look nwg-bar brightnessctl pavucontrol playerctl rofi ttf-jetbrains-mono-nerd tuned-ppd system-config-printer print-manager
-	yes '' | sudo pacman -S blender gimp krita hexchat inkscape libreoffice-still mpv mupdf obs-studio kdenlive handbrake mupdf
-	yes '' | sudo pacman -S kcalc ktimer deadbeef gnome-maps gnome-disk-utility
+	yes '' | sudo pacman -S kitty flameshot thunar nwg-look nwg-bar brightnessctl pavucontrol playerctl rofi ttf-jetbrains-mono-nerd tuned-ppd system-config-printer print-manager kwallet nm-applet
+	yes '' | sudo pacman -S blender gimp krita hexchat inkscape libreoffice-still mpv mupdf obs-studio kdenlive handbrake mupdf qbittorrent stellarium sqlitebrowser
+	yes '' | sudo pacman -S kcalc ktimer gnome-maps gnome-disk-utility
 	# security related
 	yes '' | sudo pacman -S keepassxc signal-desktop wireshark-cli
 	# dev
@@ -71,7 +61,7 @@ if yesno "Do you want to install the base setup?"; then
 	# file systems' support
 	yes '' | sudo pacman -S gvfs gvfs-gphoto2 gvfs-mtp mtpfs ntfs-3g
 	# yay
-	yay -S vscodium librewolf logseq-desktop xautolock
+	yay -S vscodium-bin librewolf-bin logseq-desktop-bin xautolock
 
 	# syntax highlighting for nano
 	echo "include /usr/share/nano-syntax-highlighting/*.nanorc" | sudo tee -a /etc/nanorc
@@ -84,6 +74,9 @@ if yesno "Do you want to install the base setup?"; then
 	# turn on power manager
 	sudo systemctl enable --now tuned.service
 	sudo systemctl enable --now tuned-ppd.service 
+	# install LazyVim
+	git clone https://github.com/LazyVim/starter ~/.config/nvim
+	rm -rf ~/.config/nvim/.git
 fi
 
 if yesno "Do you have a Nvidia GPU?"; then
@@ -99,7 +92,7 @@ if yesno "Do you Own a Brother Laser-Printer and want to install the driver?"; t
 fi
 
 if yesno "Do you want to install extra yay packages?"; then
-	yay -S vesktop cbonsai pipes.sh cava localsend mullvad-vpn gallery-dl osu-lazer minecraft-launcher
+	yay -S vesktop-bin cbonsai pipes.sh cava localsend-bin mullvad-vpn-bin gallery-dl osu-lazer-bin minecraft-launcher
 fi
 
 info "Setup complete!"
