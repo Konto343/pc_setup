@@ -17,11 +17,14 @@ exec --no-startup-id nm-applet
 exec --no-startup-id kwalletd6
 exec --no-startup-id blueman-applet
 
-exec feh --bg-scale /home/$USER/.wallpapers/main.jpg
+exec feh --bg-scale $HOME/.wallpapers/main.jpg
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 exec dunst
 exec /usr/lib/polkit-kde-authentication-agent-1
+
+# startup sound
+exec --no-startup-id paplay $HOME/.scripts/xp.ogg
 
 # colors
 # class                 border  backgr. text    indicator child_border

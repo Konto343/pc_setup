@@ -26,3 +26,7 @@
 	foreground = "#FFFFFF"
 	frame_color = "#FF0000"
 	timeout = -1
+
+[play_sound]
+	summary = "*"
+	script = "~/.scripts/nofi"
