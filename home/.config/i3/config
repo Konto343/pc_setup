@@ -12,7 +12,7 @@ exec xrandr --output HDMI-0 --pos 0x0 --mode 1920x1080 --rate 143.99
 # setup
 exec --no-startup-id dex --autostart --environment i3
 exec_always --no-startup-id xset dpms 0 0 180
-exec --no-startup-id xautolock -time 1 -locker "i3lock -n -e -f -c 000000"
+exec --no-startup-id xautolock -time 1 -locker "$HOME/.scripts/idle"
 exec --no-startup-id nm-applet
 exec --no-startup-id kwalletd6
 exec --no-startup-id blueman-applet

@@ -1,0 +1,6 @@
+i3lock -n -e -f -c 000000
+
+
+if [ -d "/sys/class/power_supply/BAT0" ]; then
+  systemctl suspend  
+fi
