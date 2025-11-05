@@ -13,8 +13,8 @@ set fish_greeting
 alias ls='ls -la'
 alias reload_waybar="pkill waybar && hyprctl dispatch exec waybar"
 alias refresh_mirrors="sudo reflector --latest 50 --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist --verbose"
-alias update_reboot="sudo pacman -Syu && yay -Syu && flatpak update && sudo systemctl stop docker && reboot"
-alias shutdown="echo lamo"
+alias update_reboot="sudo pacman --noconfirm -Syu && yay --noconfirm -Syu && flatpak update -y && reboot"
+alias purge_cache="sudo pacman -Scc && yay -Scc"
 
 function timer -d "Set a timer" -a seconds minutes hours
 	echo "Timer set"

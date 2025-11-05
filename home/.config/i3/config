@@ -11,19 +11,16 @@ default_border pixel 0
 
 # setup
 exec --no-startup-id dex --autostart --environment i3
-exec_always --no-startup-id xset dpms 0 0 180
+exec --no-startup-id xset dpms 0 0 180
 exec --no-startup-id xautolock -time 3 -locker "$HOME/.scripts/idle"
 exec --no-startup-id nm-applet
 exec --no-startup-id kwalletd6
 exec --no-startup-id blueman-applet
-
-exec feh --bg-scale $HOME/.wallpapers/main.jpg
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
-exec dunst
-exec /usr/lib/polkit-kde-authentication-agent-1
-
-# startup sound
+exec --no-startup-id xsetroot -solid "#005aff"
+exec --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id dunst
+#exec --no-startup-id /usr/lib/polkit-kde-authentication-agent-1
+exec --no-startup-id /usr/bin/lxpolkit
 exec --no-startup-id paplay $HOME/.scripts/xp.ogg
 
 # colors
@@ -45,9 +42,6 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 
 floating_modifier $mod
 
-bindsym $alt+F4 exec notify-send "Retard Detected" "You have pressed Alt+F4, Which doesn't work on Linux! (In most cases!)"
-
-#bindsym $mod+r exec --no-startup-id dmenu_run -l 10 -p "Choose application:" -nb '#000000' -nf '#ffffff'
 bindsym $mod+r exec "rofi -show-icons -modi drun,run -show drun"
 
 bindsym $mod+Escape exec nwg-bar
@@ -55,7 +49,7 @@ bindsym $mod+l exec i3lock -n -e -f -c 000000
 bindsym $mod+q exec i3-sensible-terminal
 bindsym $mod+e exec thunar
 bindsym $mod+c kill
-bindsym $mod+Shift+c exec notify-send "Force Kill" "Pick a window to kill" && xkill
+bindsym $mod+Shift+c exec xkill
 bindsym Print exec flameshot full
 bindsym Shift+Print exec flameshot gui
 
