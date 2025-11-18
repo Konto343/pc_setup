@@ -19,9 +19,9 @@ exec --no-startup-id blueman-applet
 exec --no-startup-id xsetroot -solid "#005aff"
 exec --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id dunst
-#exec --no-startup-id /usr/lib/polkit-kde-authentication-agent-1
 exec --no-startup-id /usr/bin/lxpolkit
 exec --no-startup-id paplay $HOME/.scripts/xp.ogg
+exec --no-startup-id kitty --hold sh -c "btop"
 
 # colors
 # class                 border  backgr. text    indicator child_border
@@ -39,6 +39,7 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym XF86Calculator exec "rofi -show calc -modi calc -no-show-match -no-sort -theme gruvbox-light"
 
 floating_modifier $mod
 
