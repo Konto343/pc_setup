@@ -27,6 +27,7 @@ sudo pacman --noconfirm -S kitty flameshot thunar nwg-look nwg-bar brightnessctl
 sudo pacman --noconfirm -S blender gimp krita inkscape libreoffice-still mpv mupdf obs-studio kdenlive handbrake mupdf qbittorrent sqlitebrowser audacity
 sudo pacman --noconfirm -S kcalc gnome-clocks gnome-maps gnome-disk-utility
 sudo pacman --noconfirm -S docker docker-compose
+sudo pacman --noconfirm -S aspell aspell-en dictd dict-gcide xfce4-dict
 sudo pacman --noconfirm -S keepassxc wireshark-cli
 sudo pacman --noconfirm -S gvfs gvfs-gphoto2 gvfs-mtp mtpfs ntfs-3g
 yay --noconfirm -S vscodium-bin librewolf-bin xautolock
@@ -37,6 +38,7 @@ sudo systemctl enable --now cups
 sudo systemctl enable --now NetworkManager.service
 sudo systemctl enable --now tuned.service
 sudo systemctl enable --now tuned-ppd.service
+sudo systemctl enable --now dictd
 sudo systemctl enable ly
 
 if [[ $(lshw -C display | grep vendor) =~ Nvidia ]]; then
