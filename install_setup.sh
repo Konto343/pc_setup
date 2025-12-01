@@ -23,7 +23,7 @@ sudo pacman --noconfirm -S i3 xorg polybar ly
 
 info "Installing Apps"
 sudo pacman --noconfirm -S networkmanager network-manager-applet 7zip blueman btop fzf powertop meld dust cmus cups cups-filters cups-pdf fish feh flatpak git kitty nano ncdu fastfetch neovim npm pyenv tmux ufw unzip zip tar tumbler ffmpeg ffmpegthumbnailer sl lshw tealdeer rsync powertop speedtest-cli dysk cronie
-sudo pacman --noconfirm -S kitty flameshot thunar nwg-look nwg-bar brightnessctl pavucontrol playerctl rofi rofi-calc ttf-jetbrains-mono-nerd tuned-ppd system-config-printer print-manager kwallet lxsession
+sudo pacman --noconfirm -S kitty flameshot thunar nwg-look nwg-bar brightnessctl pavucontrol playerctl rofi rofi-calc ttf-jetbrains-mono-nerd tuned-ppd system-config-printer print-manager gnome-keyring lxsession
 sudo pacman --noconfirm -S blender gimp krita inkscape mpv mupdf obs-studio kdenlive handbrake mupdf qbittorrent sqlitebrowser audacity
 sudo pacman --noconfirm -S kcalc gnome-clocks gnome-maps gnome-disk-utility
 sudo pacman --noconfirm -S docker docker-compose
@@ -38,7 +38,7 @@ sudo systemctl enable --now cups
 sudo systemctl enable --now NetworkManager.service
 sudo systemctl enable --now tuned.service
 sudo systemctl enable --now tuned-ppd.service
-sudo systemctl enable --now dictd
+sudo systemctl enable --now dictd.service
 sudo systemctl enable ly
 
 if [[ $(lshw -C display | grep vendor) =~ Nvidia ]]; then

@@ -14,7 +14,6 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xset dpms 0 0 180
 exec --no-startup-id xautolock -time 3 -locker "$HOME/.scripts/idle"
 exec --no-startup-id nm-applet
-exec --no-startup-id kwalletd6
 exec --no-startup-id blueman-applet
 exec --no-startup-id xsetroot -solid "#005aff"
 exec --no-startup-id $HOME/.config/polybar/launch.sh
@@ -41,6 +40,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym XF86Calculator exec "rofi -show calc -modi calc -no-show-match -no-sort -theme gruvbox-light"
+bindsym $mod+k exec "rofi -show calc -modi calc -no-show-match -no-sort -theme gruvbox-light"
 
 floating_modifier $mod
 
