@@ -7,7 +7,7 @@ info() {
 
 info "Updating pacman for init..."
 sudo pacman --noconfirm -Syu
-info "Installing apps required for setup"
+info "Installing apps required for setup..."
 sudo pacman --noconfirm -S --needed base-devel git github-cli reflector
 
 info "Installing yay"
