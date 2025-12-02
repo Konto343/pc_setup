@@ -40,7 +40,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym XF86Calculator exec "rofi -show calc -modi calc -no-show-match -no-sort -theme gruvbox-light"
-bindsym $mod+k exec "rofi -show calc -modi calc -no-show-match -no-sort -theme gruvbox-light"
+bindsym $mod+f exec "rofi -show calc -modi calc -no-show-match -no-sort -theme gruvbox-light"
 
 floating_modifier $mod
 
