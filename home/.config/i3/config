@@ -19,7 +19,7 @@ exec --no-startup-id xsetroot -solid "#000000"
 exec --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id dunst
 exec --no-startup-id /usr/bin/lxpolkit
-exec --no-startup-id paplay $HOME/.scripts/startup.ogg
+exec --no-startup-id paplay $HOME/.scripts/startup.wav
 exec --no-startup-id kitty --hold sh -c "btop"
 exec --no-startup-id xset b off #the bell is very annoying, and loud
 
