@@ -32,6 +32,9 @@ sudo pacman --noconfirm -S keepassxc wireshark-cli
 sudo pacman --noconfirm -S gvfs gvfs-gphoto2 gvfs-mtp mtpfs ntfs-3g
 sudo pacman --noconfirm -S nvidia nvidia-utils nvidia-container-toolkit
 
+# Cosmetic
+sudo pacman --noconfirm -S papirus-icon-theme
+
 yay --noconfirm -S vscodium-bin librewolf-bin xautolock
 yay --noconfirm -S vesktop-bin localsend-bin
 

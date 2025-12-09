@@ -1,31 +1,66 @@
 [global]
+	width = (100, 300)
+	origin = top-right
+	offset = (5, 15)
+	progress_bar = true
+	progress_bar_frame_width = 0
+	progress_bar_min_width = 100
+        progress_bar_max_width = 300
+        progress_bar_corner_radius = 50
+	indicate_hidden = yes
+
 	timeout = -1
-	corner_radius = 4
-	max_icon_size = 32
-	stack_duplicates = false
+	corner_radius = 2
+	min_icon_size = 32
+	max_icon_size = 64
+	stack_duplicates = true
+	ignore_newline = no
 	word_wrap = true
 	alignment = left
 	markup = full
 	sort = yes
-	padding = 4
+	padding = 10
+	format = "<b>%s</b>\n%b"
+
+	separator_height = 6
+	horizontal_padding = 8
+	text_icon_padding = 12
+	separator_color = frame
+    	sort = yes
+
+	frame_width = 1
+	frame_color = "#a0a0a0"
+	gap_size = 6
+	show_indicators = yes
+
+	icon_theme = Adwaita, Papirus, Papirus-Dark
+	enable_recursive_icon_lookup = true
 
 [urgency_low]
-	background = "#2b2b2b"
-	foreground = "#FFFFFF"
-	frame_color = "#FFFF00"
-	timeout = -1
+	background = "#000000"
+    	foreground = "#ffffff"
+        highlight = "#722ae6, #e4b5cb"
+    	default_icon = dialog-information
+
+	timeout = 0
 
 [urgency_normal]
-	background = "#2b2b2b"
-	forground = "#FFFFFF"
-	frame_color = "#0000FF"
-	timeout = -1
+	background = "#000000"
+        foreground = "#ffffff"
+        frame_color = "#5e5086"
+        highlight = "#722ae6, #e4b5cb"
+	default_icon = dialog-information
+
+	timeout = 0
 
 [urgency_critical]
-	background = "#2b2b2b"
-	foreground = "#FFFFFF"
-	frame_color = "#FF0000"
-	timeout = -1
+	background = "#000000"
+        foreground = "#ffffff"
+    	frame_color = "#d54e53"
+        highlight = "#d54e53, #f0f0f0"
+    	default_icon = dialog-warning
+
+	timeout = 0
 
 [play_sound]
 	summary = "*"

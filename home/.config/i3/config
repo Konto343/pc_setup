@@ -15,11 +15,11 @@ exec --no-startup-id xset dpms 0 0 180
 exec --no-startup-id xautolock -time 3 -locker "$HOME/.scripts/idle"
 exec --no-startup-id nm-applet
 exec --no-startup-id blueman-applet
-exec --no-startup-id xsetroot -solid "#005aff"
+exec --no-startup-id xsetroot -solid "#000000"
 exec --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id dunst
 exec --no-startup-id /usr/bin/lxpolkit
-exec --no-startup-id paplay $HOME/.scripts/xp.ogg
+exec --no-startup-id paplay $HOME/.scripts/startup.ogg
 exec --no-startup-id kitty --hold sh -c "btop"
 exec --no-startup-id xset b off #the bell is very annoying, and loud
 

@@ -1,13 +1,13 @@
 * {
 	black: rgba(0,0,0,1);
 	white: rgba(255,255,255,1);
-	grey: rgba(166,166,166,1);
+	grey: rgba(94,80,134,1);
 }
 
 window {
 	background-color: @black;
 	border-color: @grey;
-	border: 2px;
+	border: 1px;
 }
 
 textbox {
