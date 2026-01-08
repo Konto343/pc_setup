@@ -41,7 +41,7 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 
 floating_modifier $mod
 
-bindsym $mod+r exec "dmenu_run -l 10 -nb '#000000' -fn 'terminus-font:normal:pixelsize=16'"
+bindsym $mod+r exec "dmenu_run -l 10 -nb '#000000' -fn 'JetBrainsMono Nerd Font Mono:medium:pixelsize=14'"
 
 bindsym $mod+l exec i3lock -n -e -f -c 000000
 bindsym $mod+q exec alacritty

@@ -5,7 +5,7 @@
 	<name>Open Terminal Here</name>
 	<submenu></submenu>
 	<unique-id>1739114318904881-1</unique-id>
-	<command>kitty --working-directory=%f</command>
+	<command>alacritty --hold --working-directory=%f</command>
 	<description>Opens a Terminal set to a directory.</description>
 	<range></range>
 	<patterns>*</patterns>
