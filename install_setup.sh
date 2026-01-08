@@ -19,13 +19,13 @@ makepkg -si
 yay --version
 
 info "Installing Window Manager"
-sudo pacman --noconfirm -S i3 xorg polybar ly
+sudo pacman --noconfirm -S i3 xorg polybar
 
 info "Installing Apps"
-sudo pacman --noconfirm -S networkmanager network-manager-applet 7zip blueman btop fzf powertop meld dunst dust cups cups-filters cups-pdf fish feh flatpak git kitty nano ncdu fastfetch neovim npm tmux ufw unzip zip tar tumbler ffmpeg ffmpegthumbnailer sl lshw tealdeer rsync powertop speedtest-cli dysk cronie
-sudo pacman --noconfirm -S kitty flameshot thunar nwg-look nwg-bar brightnessctl pavucontrol playerctl rofi rofi-calc ttf-jetbrains-mono-nerd tuned-ppd system-config-printer print-manager gnome-keyring lxsession
-sudo pacman --noconfirm -S blender gimp krita inkscape mpv mupdf obs-studio kdenlive handbrake mupdf qbittorrent sqlitebrowser audacity
-sudo pacman --noconfirm -S kcalc gnome-clocks gnome-maps gnome-disk-utility
+sudo pacman --noconfirm -S networkmanager network-manager-applet 7zip blueman btop fzf meld dunst dust cups cups-filters cups-pdf fish feh flatpak git nano ncdu fastfetch neovim npm tmux ufw unzip zip tar tumbler ffmpeg ffmpegthumbnailer sl lshw tealdeer rsync powertop dysk cronie
+sudo pacman --noconfirm -S alacritty flameshot thunar nwg-look brightnessctl pavucontrol playerctl dmenu tuned-ppd lxsession
+sudo pacman --noconfirm -S blender gimp krita inkscape mpv mupdf obs-studio kdenlive qbittorrent sqlitebrowser audacity
+sudo pacman --noconfirm -S kcalc gnome-maps
 sudo pacman --noconfirm -S docker docker-compose
 sudo pacman --noconfirm -S aspell aspell-en dictd dict-gcide xfce4-dict
 sudo pacman --noconfirm -S keepassxc wireshark-cli
@@ -33,7 +33,7 @@ sudo pacman --noconfirm -S gvfs gvfs-gphoto2 gvfs-mtp mtpfs ntfs-3g
 sudo pacman --noconfirm -S nvidia nvidia-utils nvidia-container-toolkit
 
 # Cosmetic
-sudo pacman --noconfirm -S papirus-icon-theme
+sudo pacman --noconfirm -S papirus-icon-theme terminus-font
 
 yay --noconfirm -S vscodium-bin librewolf-bin xautolock
 yay --noconfirm -S vesktop-bin localsend-bin
@@ -44,6 +44,5 @@ sudo systemctl enable --now NetworkManager.service
 sudo systemctl enable --now tuned.service
 sudo systemctl enable --now tuned-ppd.service
 sudo systemctl enable --now dictd.service
-sudo systemctl enable ly
 
 info "Setup complete!"

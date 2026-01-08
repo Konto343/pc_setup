@@ -7,7 +7,7 @@ font pango:monospace 10
 default_border pixel 0 
 
 # pc only
-# exec xrandr --output HDMI-0 --pos 0x0 --mode 1920x1080 --rate 143.99
+exec xrandr --output HDMI-0 --pos 0x0 --mode 1920x1080 --rate 143.99
 
 # setup
 exec --no-startup-id dex --autostart --environment i3
@@ -15,13 +15,12 @@ exec --no-startup-id xset dpms 0 0 180
 exec --no-startup-id xautolock -time 3 -locker "$HOME/.scripts/idle"
 exec --no-startup-id nm-applet
 exec --no-startup-id blueman-applet
-exec --no-startup-id xsetroot -solid "#000000"
 exec --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id dunst
 exec --no-startup-id /usr/bin/lxpolkit
 exec --no-startup-id paplay $HOME/.scripts/startup.wav
-exec --no-startup-id kitty --hold sh -c "btop"
 exec --no-startup-id xset b off #the bell is very annoying, and loud
+exec --no-startup-id feh --bg-scale ~/.wallpapers/main.jpg
 
 # colors
 # class                 border  backgr. text    indicator child_border
@@ -39,16 +38,13 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
-bindsym XF86Calculator exec "rofi -show calc -modi calc -no-show-match -no-sort -theme gruvbox-light"
-bindsym $mod+f exec "rofi -show calc -modi calc -no-show-match -no-sort -theme gruvbox-light"
 
 floating_modifier $mod
 
-bindsym $mod+r exec "rofi -show-icons -modi drun,run -show drun"
+bindsym $mod+r exec "dmenu_run -l 10 -nb '#000000' -fn 'terminus-font:normal:pixelsize=16'"
 
-bindsym $mod+Escape exec nwg-bar
 bindsym $mod+l exec i3lock -n -e -f -c 000000
-bindsym $mod+q exec i3-sensible-terminal
+bindsym $mod+q exec alacritty
 bindsym $mod+e exec thunar
 bindsym $mod+c kill
 bindsym $mod+Shift+c exec xkill
