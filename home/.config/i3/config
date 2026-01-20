@@ -7,12 +7,13 @@ font pango:monospace 10
 default_border pixel 0 
 
 # pc only
-exec xrandr --output HDMI-0 --pos 0x0 --mode 1920x1080 --rate 143.99
+# exec xrandr --output HDMI-0 --pos 1920x0 --mode 1920x1080 --rate 143.99
+# exec xrandr --output DP-1 --pos 0x0 --mode 1920x1080 --rate 60.00
 
 # setup
 exec --no-startup-id dex --autostart --environment i3
-exec --no-startup-id xset dpms 0 0 180
-exec --no-startup-id xautolock -time 3 -locker "$HOME/.scripts/idle"
+exec --no-startup-id xset dpms 0 0 30
+exec --no-startup-id xautolock -time 1 -locker "$HOME/.scripts/idle"
 exec --no-startup-id nm-applet
 exec --no-startup-id blueman-applet
 exec --no-startup-id $HOME/.config/polybar/launch.sh
@@ -21,6 +22,7 @@ exec --no-startup-id /usr/bin/lxpolkit
 exec --no-startup-id paplay $HOME/.scripts/startup.wav
 exec --no-startup-id xset b off #the bell is very annoying, and loud
 exec --no-startup-id feh --bg-scale ~/.wallpapers/main.jpg
+exec --no-startup-id flameshot
 
 # colors
 # class                 border  backgr. text    indicator child_border

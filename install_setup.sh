@@ -27,7 +27,7 @@ sudo pacman --noconfirm -S alacritty flameshot thunar nwg-look brightnessctl pav
 sudo pacman --noconfirm -S blender gimp krita inkscape mpv mupdf obs-studio kdenlive qbittorrent sqlitebrowser audacity
 sudo pacman --noconfirm -S kcalc gnome-maps
 sudo pacman --noconfirm -S docker docker-compose
-sudo pacman --noconfirm -S aspell aspell-en dictd dict-gcide xfce4-dict
+sudo pacman --noconfirm -S aspell aspell-en dictd xfce4-dict
 sudo pacman --noconfirm -S keepassxc wireshark-cli
 sudo pacman --noconfirm -S gvfs gvfs-gphoto2 gvfs-mtp mtpfs ntfs-3g
 sudo pacman --noconfirm -S nvidia-open nvidia-utils nvidia-container-toolkit
@@ -39,8 +39,9 @@ sudo pacman --noconfirm -S ttf-jetbrains-mono-nerd
 sudo pacman --noconfirm -S papirus-icon-theme
 sudo pacman --noconfirm -S gnome-themes-extra
 
-yay --noconfirm -S vscodium-bin librewolf-bin xautolock
-yay --noconfirm -S vesktop-bin localsend-bin
+yay --noconfirm -S vscodium librewolf xautolock
+yay --noconfirm -S vesktop localsend
+yay --noconfirm -S dict-gcide
 
 xdg-mime default thunar.desktop inode/directory
 sudo systemctl enable --now cups
