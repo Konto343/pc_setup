@@ -10,7 +10,7 @@ end
 set fish_greeting
 
 # Alias
-alias ls='ls -la'
+alias ls='ls -la --color=auto'
 alias refresh_mirrors="sudo reflector --latest 50 --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist --verbose"
 alias update_reboot="sudo pacman -Syu && yay -Syu && flatpak update -y && reboot"
 alias purge_cache="sudo pacman -Scc && yay -Scc"
