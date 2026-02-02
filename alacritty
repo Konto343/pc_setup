@@ -1,0 +1,6 @@
+:: There are 4 members in group i3:
+:: Repository extra
+   1) i3-wm  2) i3blocks  3) i3lock  4) i3status
+:: There are 49 members in group xorg:
+:: Repository extra
+   1) xf86-video-vesa  2) xorg-bdftopcf  3) xorg-docs  4) xorg-font-util  5) xorg-fonts-100dpi  6) xorg-fonts-75dpi  7) xorg-fonts-encodings  8) xorg-iceauth  9) xorg-mkfontscale  10) xorg-server  11) xorg-server-common  12) xorg-server-devel  13) xorg-server-src  14) xorg-server-xephyr  15) xorg-server-xnest  16) xorg-server-xvfb  17) xorg-sessreg  18) xorg-setxkbmap  19) xorg-smproxy  20) xorg-x11perf  21) xorg-xauth  22) xorg-xbacklight  23) xorg-xcmsdb  24) xorg-xcursorgen  25) xorg-xdpyinfo  26) xorg-xdriinfo  27) xorg-xev  28) xorg-xgamma  29) xorg-xhost  30) xorg-xinput  31) xorg-xkbcomp  32) xorg-xkbevd  33) xorg-xkbutils  34) xorg-xkill  35) xorg-xlsatoms  36) xorg-xlsclients  37) xorg-xmodmap  38) xorg-xpr  39) xorg-xprop  40) xorg-xrandr  41) xorg-xrdb  42) xorg-xrefresh  43) xorg-xset  44) xorg-xsetroot  45) xorg-xvinfo  46) xorg-xwayland  47) xorg-xwd  48) xorg-xwininfo  49) xorg-xwud

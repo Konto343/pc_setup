@@ -5,45 +5,24 @@ info() {
   echo -e "${BL}-------------$1${NC}"
 }
 
-info "Updating pacman for init..."
-sudo pacman --noconfirm -Syu
-info "Installing apps required for setup..."
-sudo pacman --noconfirm -S --needed base-devel git github-cli reflector
+info "Setting and updating pacman for Setup..."
+sudo pacman -Syu && sudo pacman -S --needed base-devel git github-cli reflector
+
+info "Installing Setup Apps..."
+sudo pacman -S i3 xorg polybar xorg-xinit networkmanager network-manager-applet 7zip blueman btop fzf meld dunst 
+dust cups cups-filters cups-pdf fish feh flatpak git nano ncdu fastfetch neovim npm tmux ufw unzip zip tar tumbler 
+ffmpeg ffmpegthumbnailer lshw tealdeer rsync powertop dysk cronie clipcat alacritty flameshot thunar lxappearance brightnessctl pavucontrol playerctl dmenu tuned-ppd lxsession blender gimp krita inkscape mpv mupdf obs-studio kdenlive qbittorrent sqlitebrowser audacity kcalc gnome-maps docker docker-compose aspell aspell-en dictd xfce4-dict keepassxc wireshark-cli gvfs gvfs-gphoto2 gvfs-mtp mtpfs ntfs-3g cowsay fortune-mod sl ttf-jetbrains-mono-nerd papirus-icon-theme gnome-themes-extra #nvidia-open nvidia-utils nvidia-container-toolkit
 
 info "Installing yay"
-sudo rm -r yay
-sudo git clone https://aur.archlinux.org/yay.git
-sudo chown -R 1000:1000 yay
-cd yay
-makepkg -si
-yay --version
+sudo rm -rf yay &&
+  sudo git clone https://aur.archlinux.org/yay.git &&
+  sudo chown -R 1000:1000 yay &&
+  cd yay &&
+  makepkg -si &&
+  yay --version
 
-info "Installing Window Manager"
-sudo pacman --noconfirm -S i3 xorg polybar startx
-
-info "Installing Apps"
-sudo pacman --noconfirm -S networkmanager network-manager-applet 7zip blueman btop fzf meld dunst dust cups cups-filters cups-pdf fish feh flatpak git nano ncdu fastfetch neovim npm tmux ufw unzip zip tar tumbler ffmpeg ffmpegthumbnailer lshw tealdeer rsync powertop dysk cronie clipcat
-sudo pacman --noconfirm -S alacritty flameshot thunar lxappearance brightnessctl pavucontrol playerctl dmenu tuned-ppd lxsession
-sudo pacman --noconfirm -S blender gimp krita inkscape mpv mupdf obs-studio kdenlive qbittorrent sqlitebrowser audacity
-sudo pacman --noconfirm -S kcalc gnome-maps
-sudo pacman --noconfirm -S docker docker-compose
-sudo pacman --noconfirm -S aspell aspell-en dictd xfce4-dict
-sudo pacman --noconfirm -S keepassxc wireshark-cli
-sudo pacman --noconfirm -S gvfs gvfs-gphoto2 gvfs-mtp mtpfs ntfs-3g
-# Uncomment if you need nvidia
-# sudo pacman --noconfirm -S nvidia-open nvidia-utils nvidia-container-toolkit
-
-# Silly packages
-sudo pacman --noconfirm -S cowsay fortune-mod sl
-
-info "Install Fonts & Icons"
-sudo pacman --noconfirm -S ttf-jetbrains-mono-nerd
-sudo pacman --noconfirm -S papirus-icon-theme
-sudo pacman --noconfirm -S gnome-themes-extra
-
-yay --noconfirm -S vscodium-bin librewolf-bin xautolock
-yay --noconfirm -S vesktop-bin localsend-bin
-yay --noconfirm -S dict-gcide
+info "Installing yay apps..."
+yay -S -v --sudoloop vscodium librewolf xautolock vesktop localsend dict-gcide
 
 xdg-mime default thunar.desktop inode/directory
 xdg-mime default Alacritty.desktop x-scheme-handler/terminal
