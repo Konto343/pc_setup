@@ -8,5 +8,5 @@ if [ "$player_status" = "Playing" ]; then
 elif [ "$player_status" = "Paused" ]; then
     echo "PAUSED: $(playerctl metadata title)" | cut -c 1-30
 else
-    echo "<NO PLAYER>"
+    echo ""
 fi

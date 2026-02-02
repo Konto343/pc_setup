@@ -8,4 +8,5 @@
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
-fish
+. "$HOME/.aftman/env"
+zsh

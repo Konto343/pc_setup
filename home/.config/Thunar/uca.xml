@@ -17,7 +17,7 @@
 	<name>Edit In Nano</name>
 	<submenu></submenu>
 	<unique-id>1740184033398771-1</unique-id>
-	<command>kitty -e nano %f</command>
+	<command>alacritty -e nano %f</command>
 	<description>Opens a file in Nano</description>
 	<range>*</range>
 	<patterns>*</patterns>
@@ -32,7 +32,7 @@
 	<name>FFmpeg Data</name>
 	<submenu></submenu>
 	<unique-id>1740154063398771-1</unique-id>
-	<command>kitty --hold -e ffmpeg -i %f</command>
+	<command>alacritty --hold -e ffmpeg -i %f</command>
 	<description>Prints file data with FFmpeg</description>
 	<range>*</range>
 	<patterns>*</patterns>
@@ -52,26 +52,6 @@
 	<range>*</range>
 	<patterns>*</patterns>
 	<image-files/>
-</action>
-<action>
-	<icon>folder-music</icon>
-	<name>Play with Deadbeef</name>
-	<submenu></submenu>
-	<unique-id>1752531880779848-1</unique-id>
-	<command>deadbeef %F</command>
-	<description>Play song(s) with Deadbeef</description>
-	<range>*</range>
-	<patterns>*</patterns>
-</action>
-<action>
-	<icon>system-file-manager</icon>
-	<name>Compare With Meld</name>
-	<submenu></submenu>
-	<unique-id>1752532076427906-2</unique-id>
-	<command>kitty --hold sh -c &quot;sudo meld %F&quot; &amp;&amp; notify-send &quot;Meld&quot; &quot;Comparsion done!&quot;</command>
-	<description>Compare file(s) with meld</description>
-	<range>*</range>
-	<patterns>*</patterns>
 </action>
 <action>
 	<icon></icon>
