@@ -22,7 +22,7 @@ sudo rm -rf yay &&
   yay --version
 
 info "Installing yay apps..."
-yay -S -v --sudoloop vscodium librewolf xautolock vesktop localsend dict-gcide
+yay -S -v --sudoloop vscodium-bin librewolf-bin xautolock vesktop-bin localsend-bin dict-gcide
 
 xdg-mime default thunar.desktop inode/directory
 xdg-mime default Alacritty.desktop x-scheme-handler/terminal
