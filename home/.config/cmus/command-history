@@ -1,6 +1,0 @@
-colorscheme main
-colorscheme test
-q
-add ./youtube/
-clear
-add ./
