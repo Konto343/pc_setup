@@ -19,6 +19,7 @@ exec --no-startup-id paplay $HOME/.scripts/startup.wav
 #the bell is very annoying, and loud
 exec --no-startup-id xset b off 
 exec --no-startup-id flameshot
+exec --no-startup-id oneko
 exec --no-startup-id feh --bg-scale ~/.wallpapers/main.jpg
 exec --no-startup-id $HOME/.scripts/monitors
 
