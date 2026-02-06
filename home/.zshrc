@@ -105,3 +105,4 @@ source $ZSH/oh-my-zsh.sh
 
 alias ls="ls -a --color"
 alias update_shutdown="sudo pacman -Syu && yay -Syu --sudoloop && flatpak update && shutdown"
+alias remove_orphans="sudo pacman -Rns $(pacman -Qdtq)"

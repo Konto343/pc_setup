@@ -64,4 +64,4 @@
 
 [play_sound]
 	summary = "*"
-	script = "~/.scripts/nofi"
+	script = "~/.config/dunst/sound"

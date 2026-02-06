@@ -2,35 +2,30 @@
 set $mod Mod4
 set $alt Alt
 
-# i3 vars
-font pango:monospace 10
-default_border pixel 0 
+# devices
+input "type:touchpad" {
+    tap enabled
+    tap_button_map lrm
+    dwt enabled
+    dwtp enabled
+}
+
+# fonts
+font pango:monospace 1
+default_border none #pixel 1
 
 # setup
-exec --no-startup-id dex --autostart --environment i3
-#exec --no-startup-id xset dpms 0 0 60
-#exec --no-startup-id xautolock -time 1 -locker "$HOME/.scripts/idle"
-exec --no-startup-id nm-applet
-exec --no-startup-id blueman-applet
-exec --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id swayidle -w \
+	timeout 30 'swaylock -f -c 000000' \
+	timeout 30 'systemctl suspend' \
+	before-sleep 'playerctl pause'
 exec --no-startup-id dunst
 exec --no-startup-id /usr/bin/lxpolkit
-exec --no-startup-id paplay $HOME/.scripts/startup.wav
-#the bell is very annoying, and loud
 exec --no-startup-id xset b off 
-exec --no-startup-id flameshot
-exec --no-startup-id oneko
-exec --no-startup-id feh --bg-scale ~/.wallpapers/main.jpg
-exec --no-startup-id $HOME/.scripts/monitors
+exec --no-startup-id waybar
 
-# colors
-# class                 border  backgr. text    indicator child_border
-client.focused          #000000 #000000 #ffffff #2e9ef4   #000000
-client.focused_inactive #222222 #222222 #ffffff #484e50   #5f676a
-client.unfocused        #222222 #222222 #ffffff #292d2e   #222222
-client.urgent           #2f343a #900000 #ffffff #900000   #900000
-client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
-client.background       #ffffff
+# wallpaper
+output * bg ~/.wallpapers/main.jpg fill
 
 # bindings
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
@@ -42,15 +37,15 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 
 floating_modifier $mod
 
-bindsym $mod+r exec "dmenu_run -l 10 -nb '#000000' -fn 'JetBrainsMono Nerd Font Mono:medium:pixelsize=14'"
+bindsym $mod+r exec fuzzel -b 000000ff -r 0
 
-bindsym $mod+l exec i3lock -n -e -f -c 000000
-bindsym $mod+q exec alacritty
+bindsym $mod+l exec swaylock -c 000000
+bindsym $mod+q exec foot
 bindsym $mod+e exec thunar
 bindsym $mod+c kill
-bindsym $mod+Shift+c exec xkill
-bindsym Print exec flameshot full
-bindsym Shift+Print exec flameshot gui
+bindsym $mod+Shift+c exec ~/.config/sway/wkill && notify-send 'Force killed program.'
+bindsym Print exec grim && notify-send 'Screenshot taken.'
+bindsym Shift+Print exec grim | slurp && notify-send 'Screenshot taken.'
 
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
@@ -107,7 +102,7 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 bindsym $mod+Shift+r reload
-bindsym $mod+m exec i3-msg exit
+bindsym $mod+m exec swaymsg exit
 
 mode "resize" {
         bindsym j resize shrink width 10 px or 10 ppt
