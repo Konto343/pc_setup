@@ -22,14 +22,13 @@
     min-height: 0;
     margin: 0;
     padding: 0;
+    font-family: monospace Bold;
+    font-size: 12px
 }
 
 #waybar {
     background: #000000;
     color: white;
-    /* font-family: Cantarell, Noto Sans, sans-serif; */
-    font-family: JetBrainsMonoNL Nerd Font Mono, Regular;
-    font-size: 13px;
 }
 
 #battery,
@@ -71,7 +70,6 @@
 }
 
 #clock {
-    font-weight: bold;
     color: orange;
 }
 
@@ -159,7 +157,6 @@
 
 #privacy,
 #window {
-    font-weight: bold;
     padding-left: 10px;
 }
 

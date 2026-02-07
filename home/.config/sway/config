@@ -10,8 +10,12 @@ input "type:touchpad" {
     dwtp enabled
 }
 
+#monitors
+output HDMI-A-1 pos 1920 0 mode 1920x1080@144hz
+output DP-1 pos 0 0 mode 1920x1080@60hz
+
 # fonts
-font pango:monospace 1
+font pango:monospace Bold 8
 default_border none #pixel 1
 
 # setup
