@@ -1,0 +1,73 @@
+configuration {
+	show-icons: false;
+}
+
+window {
+	background-color: #000000;
+	text-color: #FFFFFF;
+	border-radius: 0px;
+	border-color: #808080;
+}
+
+prompt {
+	background-color: #000000;
+	text-color: #FFFFFF;
+}
+
+textbox-prompt-colon {
+	background-color: #000000;
+	text-color: #000000;
+}
+
+inputbar {
+    background-color: #000000;
+    text-color: #FFFFFF;
+    border-color: #000000;
+}
+
+
+listview {
+    background-color: #000000;
+}
+
+mainbox {
+    background-color: #000000;
+}
+
+element {
+    background-color: #000000;
+    text-color: #FFFFFF;
+}
+
+element.alternate.normal,
+element.normal.normal {
+    background-color: #000000;
+    text-color: #FFFFFF;
+}
+
+element normal.urgent,
+element alternate.urgent {
+    background-color: #FF0000;
+    text-color: #FFFFFF;
+}
+
+element normal.active,
+element alternate.active {
+    background-color: #000000;
+    text-color: #FFFFFF;
+}
+
+element selected {
+    background-color: #808080;
+    text-color: #FFFFFF;
+}
+
+element selected.urgent {
+    background-color: #FF0000;
+    text-color: #FFFFFF;
+}
+
+element selected.active {
+    background-color: #000000;
+    color: #FFFFFF;
+}
