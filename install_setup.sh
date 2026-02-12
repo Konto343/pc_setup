@@ -11,11 +11,13 @@ sudo pacman -Syu && sudo pacman -S --needed base-devel git github-cli reflector
 
 info "Installing system"
 
-sudo pacman -S i3 xorg polybar xorg-xinit kitty rofi
+sudo pacman -S i3 xorg polybar xorg-xinit i3lock kitty rofi
 
 info "Installing apps..."
 
-sudo pacman -S networkmanager bluez bluez-utils 7zip btop dunst cups cups-filters cups-pdf feh flatpak git nano ncdu fastfetch neovim npm ufw unzip zip tar ffmpeg ffmpegthumbnailer rsync powertop cronie clipcat flameshot thunar lxappearance brightnessctl pavucontrol playerctl tuned-ppd lxsession blender gimp krita inkscape mpv mupdf obs-studio kdenlive qbittorrent sqlitebrowser audacity kcalc gnome-maps docker docker-compose aspell aspell-en dictd xfce4-dict keepassxc wireshark-qt gvfs gvfs-gphoto2 gvfs-mtp mtpfs ntfs-3g gnome-themes-extra cmus cava #nvidia-open nvidia-utils nvidia-container-toolkit
+sudo pacman -S networkmanager bluez bluez-utils 7zip btop dunst cups cups-filters cups-pdf feh flatpak git nano ncdu fastfetch neovim npm ufw unzip zip tar ffmpeg ffmpegthumbnailer rsync tmux powertop cronie clipcat flameshot 
+thunar lxappearance brightnessctl pavucontrol playerctl tuned-ppd lxsession blender gimp krita inkscape mpv mupdf obs-studio kdenlive qbittorrent sqlitebrowser audacity kcalc gnome-maps gnome-clocks docker docker-compose aspell aspell-en 
+dictd xfce4-dict keepassxc wireshark-qt gvfs gvfs-gphoto2 gvfs-mtp mtpfs ntfs-3g gnome-themes-extra cmus cava yt-dlp #nvidia-open nvidia-utils nvidia-container-toolkit
 
 info "Installing yay"
 

@@ -7,7 +7,7 @@ font pango:monospace 10
 default_border pixel 1
 
 # monitors
-# xrandr ...
+exec --no-startup-id ~/.config/i3/monitors
 
 # setup
 exec --no-startup-id dex --autostart --environment i3
@@ -22,11 +22,11 @@ exec --no-startup-id feh --bg-scale ~/.wallpapers/main.jpg
 
 # colors
 # class                 border  backgr. text    indicator child_border
-client.focused          #000000 #000000 #FFFFFF #2e9ef4   #000000
-client.focused_inactive #222222 #222222 #FFFFFF #484e50   #5f676a
-client.unfocused        #222222 #222222 #FFFFFF #292d2e   #222222
+client.focused          #606060 #000000 #FFFFFF #FFFFFF   #606060
+client.focused_inactive #000000 #000000 #FFFFFF #000000   #000000
+client.unfocused        #000000 #000000 #FFFFFF #000000   #000000
 client.urgent           #FF0000 #900000 #FFFFFF #900000   #900000
-client.placeholder      #000000 #0c0c0c #FFFFFF #000000   #0c0c0c
+client.placeholder      #FFFFFF #000000 #FFFFFF #000000   #0c0c0c
 client.background       #FFFFFF
 
 # bindings

@@ -1,5 +1,5 @@
 configuration {
-	show-icons: false;
+	show-icons: true;
 }
 
 window {
@@ -23,6 +23,15 @@ inputbar {
     background-color: #000000;
     text-color: #FFFFFF;
     border-color: #000000;
+}
+
+entry {
+    enabled:                     true;
+    background-color:            inherit;
+    text-color:                  inherit;
+    cursor:                      text;
+    placeholder:                 "...";
+    placeholder-color:           inherit;
 }
 
 
