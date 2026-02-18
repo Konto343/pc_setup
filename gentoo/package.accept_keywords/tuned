@@ -1,0 +1,2 @@
+sys-apps/tuned ~amd64
+dev-python/python-linux-procfs ~amd64

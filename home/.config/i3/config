@@ -12,7 +12,8 @@ gaps outer 5px
 exec --no-startup-id ~/.config/i3/monitors
 
 # setup
-exec --no-startup-id dex --autostart --environment i3
+# exec --no-startup-id dex --autostart --environment i3
+exec --no-startup-id picom --daemon
 exec --no-startup-id xset dpms 0 0 60
 exec --no-startup-id xautolock -time 1 -locker "i3lock -n -e -f -c 000000"
 exec --no-startup-id $HOME/.config/polybar/launch.sh

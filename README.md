@@ -1,11 +1,21 @@
 # My Arch Setup:
-My arch setup for new computers. Includes my personal dotfile and scripts as well.
+My setup for new computers. Includes my personal dotfile and scripts as well.
 
 ## Note:
-This is only for people who've installed (Arch) Linux and want a basic setup.
+This is only for people who've installed (Arch/Gentoo) Linux and want a basic setup.
 However, this repo exists to serve me personally, but you clone it if you want.
 
-## Usage:
-Copy the Repo, and run the "install_setup.sh" script, and finally copy over the "home" folder to your
+## Arch usage:
+Copy the Repo, and run the "arch_install.sh" script, and finally copy over the "home" folder to your
 home directory with: 
+sudo cp -rf ./home/. ~/
+
+## Gentoo usage:
+If you know gentoo.
+Copy over the /etc/portage configs
+Adjust for packages/drivers in the WORLD file depending on system specs.
+Adjust make.conf for CPU jobs count.
+Compile till done.
+
+Copy config:
 sudo cp -rf ./home/. ~/
