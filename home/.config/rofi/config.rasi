@@ -1,5 +1,6 @@
 configuration {
 	show-icons: true;
+	font: "monospace 10";
 }
 
 window {
@@ -34,9 +35,20 @@ entry {
     placeholder-color:           inherit;
 }
 
+textbox {
+  background-color: #FF0000;
+}
 
+/* the stupid dotted line */
 listview {
-    background-color: #000000;
+	border-color: #000000;
+	scrollbar : false;
+	fixed-height : false;
+	columns: 1;
+	lines: 20;
+	cycle: false;
+	dynamic: true;
+	layout: vertical;
 }
 
 mainbox {

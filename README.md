@@ -14,7 +14,7 @@ sudo cp -rf ./home/. ~/
 If you know gentoo.
 Copy over the /etc/portage configs
 Adjust for packages/drivers in the WORLD file depending on system specs.
-Adjust make.conf for CPU jobs count.
+Adjust cpu-flags and video_cards in package.use for your system specs.
 Compile till done.
 
 Copy config:

@@ -5,16 +5,12 @@ set $alt Alt
 # i3 vars
 font pango:monospace 10
 default_border pixel 1
-gaps inner 5px
-gaps outer 5px
 
 # monitors
 exec --no-startup-id ~/.config/i3/monitors
 
 # setup
-# exec --no-startup-id dex --autostart --environment i3
-exec --no-startup-id picom --daemon
-exec --no-startup-id xset dpms 0 0 60
+exec --no-startup-id xset dpms 0 0 30
 exec --no-startup-id xautolock -time 1 -locker "i3lock -n -e -f -c 000000"
 exec --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id dunst
@@ -24,9 +20,9 @@ exec --no-startup-id feh --bg-scale ~/.wallpapers/main.jpg
 
 # colors
 # class                 border  backgr. text    indicator child_border
-client.focused          #808080 #000000 #FFFFFF #FFFFFF   #808080
-client.focused_inactive #404040 #000000 #FFFFFF #000000   #404040
-client.unfocused        #404040 #000000 #FFFFFF #000000   #404040
+client.focused          #505050 #000000 #FFFFFF #FFFFFF   #505050
+client.focused_inactive #202020 #000000 #FFFFFF #000000   #202020
+client.unfocused        #202020 #000000 #FFFFFF #000000   #202020
 client.urgent           #FF0000 #900000 #FFFFFF #900000   #900000
 client.placeholder      #FFFFFF #000000 #FFFFFF #000000   #0c0c0c
 client.background       #FFFFFF
