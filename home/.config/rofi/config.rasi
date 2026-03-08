@@ -1,94 +1,62 @@
 configuration {
-	show-icons: true;
-	font: "monospace 10";
+	modi:                       "drun,run,filebrowser";
+    	show-icons:                 false;
+    	display-drun:               ">";
+    	display-run:                ">";
+    	display-filebrowser:        "E";
+    	display-window:             "W";
+	drun-display-format:        "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
+	window-format:              "{w} · {c} · {t}";
+}
+
+
+* {
+    border-colour:               #000000;
+    handle-colour:               #000000;
+
+    background-colour:           #000000;
+    foreground-colour:           #FFFFFF;
+    alternate-background:        #000000;
+
+    normal-background:           #000000;
+    normal-foreground:           #FFFFFF;
+
+    urgent-background:           #000000;
+    urgent-foreground:           #000000;
+
+    active-background:           #000000;
+    active-foreground:           #000000;
+
+    selected-normal-background:  #FFFFFF;
+    selected-normal-foreground:  #000000;
+
+    selected-urgent-background:  #000000;
+    selected-urgent-foreground:  #000000;
+
+    selected-active-background:  #000000;
+    selected-active-foreground:  #000000;
+
+    alternate-normal-background: #000000;
+    alternate-normal-foreground: #FFFFFF;
+
+    alternate-urgent-background: #000000;
+    alternate-urgent-foreground: #FFFFFF;
+
+    alternate-active-background: #000000;
+    alternate-active-foreground: #FFFFFF;
 }
 
 window {
 	background-color: #000000;
-	text-color: #FFFFFF;
-	border-radius: 0px;
-	border-color: #808080;
-}
-
-prompt {
-	background-color: #000000;
-	text-color: #FFFFFF;
-}
-
-textbox-prompt-colon {
-	background-color: #000000;
-	text-color: #000000;
-}
-
-inputbar {
-    background-color: #000000;
-    text-color: #FFFFFF;
-    border-color: #000000;
-}
-
-entry {
-    enabled:                     true;
-    background-color:            inherit;
-    text-color:                  inherit;
-    cursor:                      text;
-    placeholder:                 "...";
-    placeholder-color:           inherit;
-}
-
-textbox {
-  background-color: #FF0000;
-}
-
-/* the stupid dotted line */
-listview {
-	border-color: #000000;
-	scrollbar : false;
-	fixed-height : false;
-	columns: 1;
-	lines: 20;
-	cycle: false;
-	dynamic: true;
-	layout: vertical;
+	border-color: #242424;
 }
 
 mainbox {
-    background-color: #000000;
+	background-color: transparent;
+	border-color: #000000;
 }
 
-element {
-    background-color: #000000;
-    text-color: #FFFFFF;
-}
-
-element.alternate.normal,
-element.normal.normal {
-    background-color: #000000;
-    text-color: #FFFFFF;
-}
-
-element normal.urgent,
-element alternate.urgent {
-    background-color: #FF0000;
-    text-color: #FFFFFF;
-}
-
-element normal.active,
-element alternate.active {
-    background-color: #000000;
-    text-color: #FFFFFF;
-}
-
-element selected {
-    background-color: #808080;
-    text-color: #FFFFFF;
-}
-
-element selected.urgent {
-    background-color: #FF0000;
-    text-color: #FFFFFF;
-}
-
-element selected.active {
-    background-color: #000000;
-    color: #FFFFFF;
+listview {
+	border-color: #000000;
+	scrollbar: false;
 }

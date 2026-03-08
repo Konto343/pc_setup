@@ -1,0 +1,13 @@
+let loop=0
+
+while true; do	
+	memory="$(free -m | grep Mem | awk '{print ($3/1000)}')"
+	swap="$(free -m | grep Swap | awk '{print ($3/1000)}')"
+	cpu="$(top -bn1 | awk '/Cpu/ { print $2}')"
+	tasks="$(top -bn1 | awk '/Tasks/ { print $2}')"
+	uptime="$( uptime | awk '{ print $3}')"	
+
+	xsetroot -name "[UPTIME: $uptime] [CPU: $cpu%, TASKS: $tasks] [RAM: $memory GiB, SWAP: $swap GiB] [$(date '+%b %d %a')] [$(date '+%H:%M')]"
+	let loop=$loop+1
+	sleep 2
+done

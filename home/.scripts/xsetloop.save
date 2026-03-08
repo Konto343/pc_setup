@@ -1,0 +1,17 @@
+let loop=0
+
+while true; do
+	if [[ $loop%300 -eq 0 ]]; then
+		weather="$(curl 'https://wttr.in?format=1')"
+		let loop=0
+	fi
+	
+	memory="$(free -m | grep Mem | awk '{print ($3/1000) GiB}')"
+	swap="$(free -m | grep Swap | awk '{print ($3/1000) GiB}')"
+	cpu="$(grep 'cpu ' /proc/stat | awk '{usage=($2+$4)*100/($2+$4+$5)} END {print usage "%"}')"
+
+	xsetroot -name "[CPU: $cpu] [RAM: $memory% (SWAP: $swap%)] [$weather] [$(date '+%b %d %a')] [$(date 
+'+%H:%M')]"
+	let loop=$loop+1
+	sleep 1
+done
