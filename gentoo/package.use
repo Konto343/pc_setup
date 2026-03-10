@@ -1,0 +1,15 @@
+sys-apps/systemd boot
+sys-apps/systemd-utils boot kernel-install
+sys-kernel/installkernel systemd systemd-boot dracut
+media-libs/libvpx postproc
+media-video/pipewire extra dbus
+x11-wm/dwm savedconfig
+app-text/xmlto text
+app-crypt/gcr gtk
+app-editors/vscodium -*
+media-video/ffmpeg opus vorbis sdl
+media-sound/cmus opus vorbis
+sys-libs/zlib minizip
+media-gfx/imagemagick jpeg png
+media-libs/libsdl2 -haptic
+media-libs/freetype harfbuzz png

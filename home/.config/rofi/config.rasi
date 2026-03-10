@@ -11,6 +11,8 @@ configuration {
 
 
 * {
+    font: "monospace 12px";
+
     border-colour:               #000000;
     handle-colour:               #000000;
 
