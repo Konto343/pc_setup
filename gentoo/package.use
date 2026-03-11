@@ -13,3 +13,5 @@ sys-libs/zlib minizip
 media-gfx/imagemagick jpeg png
 media-libs/libsdl2 -haptic
 media-libs/freetype harfbuzz png
+dev-libs/glib introspection
+net-wireless/wpa_supplicant dbus

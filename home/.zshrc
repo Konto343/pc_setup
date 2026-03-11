@@ -103,5 +103,4 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias ls="ls -a --color"
-alias update_shutdown="sudo pacman -Syu && yay -Syu --sudoloop && flatpak update && shutdown"
+alias ls="ls -la --color"
